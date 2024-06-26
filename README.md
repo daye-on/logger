@@ -12,3 +12,5 @@
 
 ### 레퍼런스
 * [Custom Logback](https://github.com/hun-ing/custom-logback)
+* [Log Back 적용기](https://velog.io/@cjh8746/Log-Back-적용기)
+* [PatternLayout](https://ckddn9496.tistory.com/86)
