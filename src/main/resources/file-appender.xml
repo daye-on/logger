@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<included>
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.directory}/${service.name}.log</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.directory}/${service.name}/%d{yyyy-MM-dd/HH-mm}.log</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="com.ex.logger.CustomLoggerPolicy"/>
+            <maxHistory>336</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{${LOG_DATEFORMAT_PATTERN:-yyyy/MM/dd HH:mm:ss.SSS}} | ${LOG_LEVEL_PATTERN:-%5p} | %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}</pattern>
+        </encoder>
+    </appender>
+</included>
